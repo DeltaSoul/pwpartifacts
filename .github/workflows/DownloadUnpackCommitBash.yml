@@ -88,7 +88,9 @@ jobs:
         with:
           name: UnmanagedSolution
           path: ./${{ github.event.inputs.solution_name }}.zip
-          
+
+      - name: Install Power Platform CLI
+        uses: microsoft/powerplatform-actions/actions-install@latest
             
       # Unpack the solution to a folder named as the solution
       - name: unpack solution
